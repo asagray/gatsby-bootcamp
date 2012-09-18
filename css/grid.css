@@ -93,11 +93,42 @@
     min-height:20px;
 }
 
-
-
 /* Default desktop */
 @media (min-width: 980px) and (max-width: 1400px) {
-    .row {width:980px;}
+    .row {width:960px;}
+    .col {
+    margin-left:15px;
+    width: 50px;
+    }
+    .col.one {width:50px;} 
+    .col.two {width:115px;}
+    .col.three {width:180px;}
+    .col.four {width:245px;}
+    .col.five {width:310px;}
+    .col.six {width:375px;}
+    .col.seven {width:440px;}
+    .col.eight {width:505px;}
+    .col.nine {width:570px;}
+    .col.ten {width:635px;}
+    .col.eleven {width:700px;}
+    .col.twelve {width:765px;}
+    .col.thirteen {width:830px;}
+    .col.fourteen {width:895px;}
+    .col.fifteen {width:960px;}
+
+    .offset-1 {margin-left:80px;}
+    .offset-2 {margin-left:145px;}
+    .offset-3 {margin-left:210px;}
+    .offset-4 {margin-left:275px;}
+    .offset-5 {margin-left:340px;}
+    .offset-6 {margin-left:405px;}
+    .offset-7 {margin-left:470px;}
+    .offset-8 {margin-left:535px;}
+    .offset-9 {margin-left:600px;}
+    .offset-10 {margin-left:665px;}
+    .offset-11 {margin-left:730px;}
+    .offset-12 {margin-left:795px;}
+    .offset-13 {margin-left:860px;}
 }
 
 /* Large desktop */
