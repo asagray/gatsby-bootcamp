@@ -13,10 +13,10 @@
     <link rel="stylesheet" type="text/css" href="css/ui.css">
 </head>
 <body>
-    <div class="row">
-        <h1>Layout</h1>
-    </div>
     <div class="example">
+        <div class="row">
+            <h1>Fluid Layout</h1>
+        </div>
         <div class="row">
             <div class="col"></div>
             <div class="col"></div>
@@ -213,11 +213,97 @@
         </div>
     </div>
 
+    <div class="example fixed">
+        <div class="row">
+            <h1>Fixed Layout</h1>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col two"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col three"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col four"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col fourteen"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col fifteen"></div>
+        </div>
+        <div class="row">
+            <div class="col offset-1"></div>
+            <div class="col offset-12"></div>
+        </div>
+        <div class="row">
+            <div class="col two offset-2"></div>
+            <div class="col four offset-2"></div>
+        </div>
+        <div class="row">
+            <div class="col offset-3"></div>
+        </div>
+    </div>
+
     <div class="row">
         <h1>Forms</h1>
     </div>
     <div class="row">
-        <div class="col seven">
+        <div class="col eight">
             <form class="framed">
                 <fieldset>
                     <div>
@@ -253,6 +339,21 @@
                         <input type="radio" name="example_6"> Four
                     </div>
                 </fieldset>
+                <fieldset>
+                    <div class="width_small">
+                        <label for="example_1">Small width input</label>
+                        <input type="text" name="example_1">
+                    </div>
+                    <div class="width_small">
+                        <label for="example_3">Small width select</label>
+                        <select>
+                            <option>Select…</option>
+                            <option>one</option>
+                            <option>two</option>
+                            <option>three</option>
+                        </select>
+                    </div>
+                </fieldset>
             </form>
         </div>
         <div class="col two">
@@ -274,24 +375,28 @@
                 <a href="#" class="btn selected">Three</a>
                 <a href="#" class="btn">Four</a>
             </div>
+            <br>
             <div class="btn-bar">
                 <a href="#" class="btn primary">One</a>
                 <a href="#" class="btn primary">Two</a>
                 <a href="#" class="btn primary selected">Three</a>
                 <a href="#" class="btn primary">Four</a>
             </div>
+            <br>
             <div class="btn-bar">
                 <a href="#" class="btn secondary">One</a>
                 <a href="#" class="btn secondary">Two</a>
                 <a href="#" class="btn secondary selected">Three</a>
                 <a href="#" class="btn secondary">Four</a>
             </div>
+            <br>
             <div class="btn-bar">
                 <a href="#" class="btn tertiary">One</a>
                 <a href="#" class="btn tertiary">Two</a>
                 <a href="#" class="btn tertiary selected">Three</a>
                 <a href="#" class="btn tertiary">Four</a>
             </div>
+            <br>
             <div class="btn-bar">
                 <a href="#" class="btn important">One</a>
                 <a href="#" class="btn important">Two</a>
@@ -299,7 +404,36 @@
                 <a href="#" class="btn important">Four</a>
             </div>
         </div>
-        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col ten">
+            <table class="data">
+                <thead>
+                    <tr>
+                        <th>Header One</th>
+                        <th>Header Two</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12/12/2012 12:12:12 PM</td>
+                        <td>Stuff and things</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>12/12/2012 12:12:12 PM</td>
+                        <td>Stuff and things</td>
+                    </tr>
+                    <tr>
+                        <td>12/12/2012 12:12:12 PM</td>
+                        <td>Stuff and things</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>12/12/2012 12:12:12 PM</td>
+                        <td>Stuff and things</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </body>             
