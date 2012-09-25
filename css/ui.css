@@ -1,3 +1,81 @@
+* {
+    -moz-box-sizing:border-box; 
+    -webkit-box-sizing:border-box; 
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    color:#666;
+    font: 13px/15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+/********* Text **************************************************/
+h1, h2, h3, h4, h5, h6 {
+    color:inherit;
+    font-family:inherit;
+    font-weight:bold;
+    margin:0 0 15px;
+    text-rendering:optimizelegibility;
+}
+h1 {
+    font-size:23px;
+    line-height:25px;
+}
+h2 {
+    font-size:20px;
+    line-height:25px;
+}
+h3 {
+    font-size:17px;
+    line-height:20px;
+}   
+h4 {
+    font-size:15px;
+    line-height:20px;
+}
+h5 {
+    font-size:13px;
+    line-height:15px;
+}
+h6 {
+    font-size:11px;
+    line-height:15px;
+}
+p {
+    margin:0 0 15px;
+}
+ul {
+    margin:0 0 15px 30px;
+    list-style:disc;
+}
+ol {
+    margin:0 0 15px 30px;
+    list-style:decimal;
+}
+ul > li, 
+ol > li {
+    margin:0 0 5px;
+}
+dl {
+    margin:0 0 15px;  
+}
+dl dt {
+    font-weight:bold;
+}
+dl dd {
+    margin:0 0 15px;
+}
+strong {
+    font-weight:bold;
+}
+em {
+    font-style:italic;
+}
 
 /********* BUTTONS **************************************************/
 /* Default Action Button */
@@ -556,6 +634,9 @@ table.data tr td em {
     color:#999;
     font-style:normal;
 }
+.alt tbody > tr:nth-child(even) {
+    background:#f5f5f5;
+}
 
 /********* Popovers **************************************************/
 .popover {
@@ -691,6 +772,41 @@ ul.popover.light > li > a:hover {
     box-shadow:inset 1px 1px 0 #fff;
 }
 
+/********* Tabs **************************************************/
+.tabbar a {
+    background:#f2f2f2;
+    background:-webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e9e9e9));
+    background:-moz-linear-gradient(top, #f5f5f5, #e9e9e9);
+    background:linear-gradient(top, #f5f5f5, #e9e9e9);
+    border:1px solid #d9d9d9;
+    border-bottom:none;
+    border-radius:5px 5px 0 0;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.2);
+    color:#346883;
+    display:inline-block;
+    float:left;
+    font-weight:bold;
+    margin-left:5px;
+    min-height:20px;
+    padding:6px 10px 3px;
+    text-decoration:none;
+    text-shadow:0px 1px 0 rgba(255,255,255,.8);
+    vertical-align:bottom;
+    width:auto;
+}
+.tabbar a.on {
+    background:#1d5073;
+    background:-webkit-gradient(linear, left top, left bottom, from(#33739e), to(#1d5173));
+    background:-moz-linear-gradient(top, #33739e, #1d5173);
+    background:linear-gradient(top, #33739e, #1d5173);
+    border-color:#396380;
+    color:#fff;
+    text-shadow:0px -1px 0 rgba(29,64,87,.4);
+}
+#tab-content fieldset {
+    padding:0;
+}
+
 /********* CLEAR FLOATS **************************************************/
 .row:after,
 .tabbar:after,
@@ -721,9 +837,6 @@ ul.popover.light > li > a:hover {
         clear:both;
         float:none;
         width:100%;
-        -moz-box-sizing:border-box; 
-        -webkit-box-sizing:border-box; 
-        box-sizing:border-box;
     }
     .row {
         padding:0 10px;
