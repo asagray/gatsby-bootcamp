@@ -34,6 +34,7 @@ h3 {
 h4 {
     font-size:15px;
     line-height:20px;
+    margin:0 0 10px;
 }
 h5 {
     font-size:13px;
@@ -408,6 +409,9 @@ textarea {
     background-color:#fafafa;
     border:1px solid #bfbfbf;
     border-color:#bfbfbf;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
     box-shadow:0 1px 0 rgba(255,255,255,.5);
     font:15px/20px Arial, sans-serif;
     height:33px;
@@ -834,9 +838,9 @@ ul.popover.light > li > a:hover {
         clear:both;
         float:none;
         width:100%;
-    }
-    .row {
-        padding:0 10px;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
     }
     .row >.col {
         margin-left:0;
