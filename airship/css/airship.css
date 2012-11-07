@@ -296,11 +296,11 @@ a.app-selection.active {
 .sidebar,
 .app-footer,
 .main {
-    -webkit-transition:all .25s linear;
-    -moz-transition:all .25s linear;
-    -ms-transition:all .25s linear;
-    -o-transition:all .25s linear;
-    transition:all .25s linear;
+    -webkit-transition:all .25s ease-in-out;
+    -moz-transition:all .25s ease-in-out;
+    -ms-transition:all .25s ease-in-out;
+    -o-transition:all .25s ease-in-out;
+    transition:all .25s ease-in-out;
 }
 
 /* JS controlled */
@@ -310,7 +310,6 @@ a.app-selection.active {
 .sidebar-off .nav-toggle {
      left:0;
 }
-
 .sidebar-on .main {
     margin-left:240px;
 }
@@ -376,7 +375,8 @@ a.app-selection.active {
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width:768px) and (max-width:979px) {
-s
+
+
 }
 /* Landscape phone to portrait tablet */
 @media (max-width:767px) {
