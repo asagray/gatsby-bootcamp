@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=1024,maximum-scale=1">
+    <title>Urban Airship | Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/940grid.css">
+    <link rel="stylesheet" type="text/css" href="../airship/css/airship.css">
+    
+    <script src="../prototypes/js/jquery-1.8.1.js"></script>
+    <script>
+        $(function(){
+            $('.nav-toggle').click(function(e){
+                if ($('body').hasClass('sidebar-on')) {
+                    $('body').removeClass('sidebar-on')
+                    $('body').addClass('sidebar-off')
+                }
+                else {
+                    $('body').removeClass('sidebar-off')
+                    $('body').addClass('sidebar-on')
+                }
+                e.preventDefault();
+            });
+        });
+    </script>
+
+</head>
+<body class="sidebar-on">
+<div class="header">
+    <h1 class="logo"><a href="#">Urban Airship</a></h1>
+    <a href="#" class="app-selection">Apps <span class="icon down-arrow-ico"></span></a>
+    <a href="#" class="nav-toggle"><span class="icon nav-ico"></span></a>
+    <ul class="account-nav">         
+        <li>Logged in as <strong>kelly</strong></li>
+        <li><a href="#">Account</span></a></li>
+        <li><a href="#">Help</a></li>
+    </ul>
+</div>
+<div class="sidebar">
+   <div class="app">
+        <div class="app-icon"></div>
+        <h1>App Name</h1>
+        <p class="meta">Production</p>
+   </div>
+    <ul class="nav">
+        <li><a href="#"><span class="icon overview-ico"></span> Overview</a></li>
+        <li><a href="#"><span class="icon messages-ico"></span> Messages</a></li>
+        <li><a href="#"><span class="icon audience-ico"></span> Audience</a></li>
+        <li><a href="#"><span class="icon reports-ico"></span> Reports</a></li>
+        <li class="current">
+            <a href="#"><span class="icon settings-ico"></span> Settings</a>
+            <ul>
+                <li class="current"><a href="#">Services</a></li>
+                <li><a href="#">Shared Access</a></li>
+                <li><a href="#">API Keys</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="app-footer">
+        <a href="#" class="create-btn"><span class="icon plus-ico">Create New...</span></a>
+    </div>
+</div>
+<div class="main">
+
+</div>
+</body>
+</html>
