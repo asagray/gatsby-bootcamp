@@ -27,6 +27,18 @@
                 }
                 e.preventDefault();
             });
+
+            $('.console-toggle').click(function(e){
+                if ($('body').hasClass('console-on')) {
+                    $('body').removeClass('console-on')
+                    $('body').addClass('console-off')
+                }
+                else {
+                    $('body').removeClass('console-off')
+                    $('body').addClass('console-on')
+                }
+                e.preventDefault();
+            });
         });
     </script>
 
@@ -66,6 +78,7 @@
         <a href="#" class="create-btn"><span class="icon plus-ico">Create New...</span></a>
     </div>
 </div>
+
 <div class="main">
 
     <div class="footer">
@@ -77,7 +90,37 @@
             DMA® is a registered service mark of The Nielsen Company. Used under License.</small>
         </p>
     </div>
+</div>
 
+ <a href="#" class="icon console-toggle"><span>+</span></a>
+ <div class="error-console">
+    <table>
+        <tr class="error">
+            <td class="error-type">
+                <span class="icon error-ico"></span>
+            </td>
+            <td class="description">
+              <h4>Apple Push service rejected device token 37f7984b3985167bfcd8edfd4c229cdb.</h4>
+              <p>Original Message: {"ios": {"alert": "Fail"}}</p>
+            </td>
+            <td class="occurred">
+                1 day ago
+            </td>
+        </tr>
+
+        <tr class="warning">
+            <td class="error-type">
+                <span class="icon warning-ico"></span>
+            </td>
+            <td class="description">
+              <h4>Apple Push service rejected device token 37f7984bfcd8e67bfcd8edfd4df39851c229cdb.</h4>
+              <p>Original Message: {"android": {"alert": "Fail"}}</p>
+            </td>
+            <td class="occurred">
+                1 day ago
+            </td>
+        </tr>     
+    </table>
 </div>
 
 </body>
