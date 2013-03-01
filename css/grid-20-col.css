@@ -1,4 +1,4 @@
-/* fluid grid */
+/* 20 column fluid grid */
 .row {
     clear:both;
     margin:0 auto;
@@ -12,6 +12,7 @@
     position:relative;
     width:3.515625%;
 }
+
 /* fluid column units */
 .col.two {width:8.59375%;}
 .col.three {width:13.671875%;}
@@ -35,6 +36,7 @@
 
 /* fluid column layout fix */
 .col:first-child {margin-left:0;}
+
 /* fluid column layout offsets */
 .col.offset-1 {margin-left:6.7708333%;}
 .col.offset-2 {margin-left:13.541667%;}
@@ -98,13 +100,13 @@
 .col.offset-18:last-child {
     margin-right:0;
 }
-/* fixed width grid */
-.row.fixed,
-.fixed .row {width:960px;}
+
+/* 20 column fixed width grid */
 .fixed .col {
     margin-left:15px;
     width: 50px;
 }
+
 /* fixed column units */
 .fixed .col.one {width:50px;} 
 .fixed .col.two {width:115px;}
@@ -121,8 +123,10 @@
 .fixed .col.thirteen {width:830px;}
 .fixed .col.fourteen {width:895px;}
 .fixed .col.fifteen {width:960px;}
+
 /* fixed column layout fix */
 .fixed .col:first-child {margin-left:0;}
+
 /* fixed column layout offsets*/
 .fixed .col.offset-1 {margin-left:65px;}
 .fixed .col.offset-2 {margin-left:130px;}
@@ -138,6 +142,7 @@
 .fixed .col.offset-12 {margin-left:780px;}
 .fixed .col.offset-13 {margin-left:845px;}
 .fixed .col.offset-14 {margin-left:910px;}
+
 /* fluid column offset layout fix */
 .fixed .col.offset-1,
 .fixed .col.offset-2,
@@ -169,51 +174,6 @@
 .fixed .col.offset-13:last-child {
     margin-right:0;
 }
-/* IE7 clear floats */
-*:first-child+html .row {min-height:1px;}
+
 /* clear floats*/
 .row:after {clear:both;content:".";display:block;height:0;visibility:hidden;}
-
-/* show the grid example */
-.example {padding:15px 0;}
-.example .row {
-    background:#f2f2f2;
-    background-color:rgba(0,0,0,.1);
-    border-radius:5px;
-    margin:0 auto 1.5306122%;
-}
-.example .col {
-    background:#ffccf6;
-    background:rgba(255,0,211,.2);
-    border-radius:5px;
-    min-height:20px;
-}
-.example.fixed .row,
-.example .row.fixed,
-.fixed .example .row {margin:0 auto 15px;}
-
-/* Responsive Media Queries */
-/* Default desktop */
-@media (min-width: 980px) and (max-width: 1280px) {
-    .row {min-width:980px;}
-}
-/* Medium desktop */
-@media (min-width: 1280px) and (max-width: 1400px){
-    /*.row {width:1280px;}*/
-}
-/* Large desktop */
-@media (min-width: 1400px) {
-    /*.row {width:1400px;}*/
-}
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-    /*.row {width:760px;}*/
-}
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-    /*.row {width:320px;}*/
-}
-/* Landscape phones and down */
-@media (max-width: 480px) {
-    /*.row {width:320px;}*/
-}
