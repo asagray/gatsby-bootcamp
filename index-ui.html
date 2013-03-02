@@ -7,9 +7,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=1024,maximum-scale=1">
-    <title>15 Column Grid</title>
+    <title>UI Elements</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/grid-15-col.css">
+    <link rel="stylesheet" type="text/css" href="css/grid-12-col.css">
     <link rel="stylesheet" type="text/css" href="css/ui.css">
     <link rel="stylesheet" type="text/css" href="css/example.css">
 </head>
@@ -18,16 +18,19 @@
         <h1>Forms</h1>
     </div>
     <div class="row">
-        <div class="col eight">
-            <form class="framed">
+        <div class="col six">
+            <form>
                 <fieldset>
                     <div>
                         <label for="example_1">Field Label</label>
                         <input type="text" name="example_1">
                     </div>
-                    <div>
+                    <div class="error">
                         <label for="example_2">Favorite Chordate</label>
                         <input type="text" name="example_2">
+                        <ul class="errorlist">
+                            <li>This field is required</li>
+                        </ul>
                     </div>
                     <div>
                         <label for="example_3">Pick a Purpose</label>
@@ -43,15 +46,17 @@
                         <textarea name="example_4"></textarea>
                     </div>
                     <div>
-                        <input type="checkbox" name="example_5">
-                        <label for="example_5">I want that</label>
+                        <input type="checkbox" name="example_5" id="check-1">
+                        <label for="check-1">I want that</label>
                     </div>
                     <div>
                         <label for="example_6">Which one?</label>
-                        <input type="radio" name="example_6"> One
-                        <input type="radio" name="example_6"> Two
-                        <input type="radio" name="example_6"> Three
-                        <input type="radio" name="example_6"> Four
+                        <ul class="list">
+                            <li><input type="radio" name="example_6" id="radio-1"> <label for="radio-1">One</label></li>
+                            <li><input type="radio" name="example_6" id="radio-2"> <label for="radio-2">Two</label></li>
+                            <li><input type="radio" name="example_6" id="radio-3"> <label for="radio-3">Three</label></li>
+                            <li><input type="radio" name="example_6" id="radio-4"> <label for="radio-4">Four</label></li>
+                        </ul>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -68,61 +73,293 @@
                             <option>three</option>
                         </select>
                     </div>
+                    <div class="width_small">
+                        <label for="example_3">Small width select</label>
+                        <select>
+                            <option>Select…</option>
+                            <option>one</option>
+                            <option>two</option>
+                            <option>three</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="width_med">
+                        <label for="example_1">Small width input</label>
+                        <input type="text" name="example_1">
+                    </div>
+                    <div class="width_med">
+                        <label for="example_3">Small width select</label>
+                        <select>
+                            <option>Select…</option>
+                            <option>one</option>
+                            <option>two</option>
+                            <option>three</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset class="submit">
+                    <div>
+                        <input type="submit" value="Submit" class="primary"> or <a href="#">cancel</a>
+                    </div>
                 </fieldset>
             </form>
         </div>
-        <div class="col two">
-            <a href="#" class="btn">Push It</a>
-            <a href="#" class="btn primary">Push It</a>
-            <a href="#" class="btn secondary">Push It</a>
-            <a href="#" class="btn tertiary">Push It</a>
-            <a href="#" class="btn important">Push It</a>
-            <a href="#" class="btn mini">Push It</a>
-            <a href="#" class="btn mini primary">Push It</a>
-            <a href="#" class="btn mini secondary">Push It</a>
-            <a href="#" class="btn mini tertiary">Push It</a>
-            <a href="#" class="btn mini important">Push It</a>
+        <div class="col six">
+            <div class="flash message">
+                <p>Message</p>
+            </div>
+            <div class="flash success">
+                <p>Success</p>
+            </div>
+            <div class="flash error">
+                <p>Error</p>
+                <ul>
+                    <li>Field is required</li>
+                    <li>Pleas enter a valid format</li>
+                </ul>
+            </div>
+            <div class="static message">
+                <p>Message</p>
+            </div>
+            <div class="static success">
+                <p>Success</p>
+            </div>
+            <div class="static error">
+                <p>Error</p>
+                <ul>
+                    <li>Field is required</li>
+                    <li>Pleas enter a valid format</li>
+                </ul>
+            </div>
+            <form>
+                <ul class="form">
+                    <li>
+                        <label for="example_1">Field Label</label>
+                        <input type="text" name="example_1">
+                    </li>
+                    <li>
+                        <label for="example_2">Favorite Chordate</label>
+                        <input type="text" name="example_2">
+                    </li>
+                    <li>
+                        <label for="example_3">Pick a Purpose</label>
+                        <select>
+                            <option>Select…</option>
+                            <option>one</option>
+                            <option>two</option>
+                            <option>three</option>
+                        </select>
+                    </li>
+                    <li class="error">
+                        <label for="example_4">The airspeed velocity of an unladen swallow</label>
+                        <textarea name="example_4"></textarea>
+                        <ul class="errorlist">
+                            <li>This field is required</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="example_5">
+                        <label for="example_5">I want that</label>
+                    </li>
+                    <li>
+                        <label for="example_6">Which one?</label>
+                        <input type="radio" name="example_6"> One
+                        <input type="radio" name="example_6"> Two
+                        <input type="radio" name="example_6"> Three
+                        <input type="radio" name="example_6"> Four
+                    </li>
+                </ul>
+                <ul class="form">
+                    <li class="width_small">
+                        <label for="example_1">Small width input</label>
+                        <input type="text" name="example_1">
+                    </li>
+                    <li class="width_small">
+                        <label for="example_3">Small width select</label>
+                        <select>
+                            <option>Select…</option>
+                            <option>one</option>
+                            <option>two</option>
+                            <option>three</option>
+                        </select>
+                    </li>
+                </ul>
+            </form>
         </div>
-        <div class="col five">
-            <div class="btn-bar">
-                <a href="#" class="btn">One</a>
-                <a href="#" class="btn">Two</a>
-                <a href="#" class="btn selected">Three</a>
-                <a href="#" class="btn">Four</a>
+    </div>
+    <div class="row">
+        <h1>Buttons</h1>
+    </div>
+    <div class="row">
+        <div class="col four">
+            <div class="module">
+                <div class="btn-group">
+                    <a href="#" class="btn">Push It</a>
+                    <a href="#" class="btn med">Push It</a>
+                    <a href="#" class="btn mini">Push It</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn">One</a>
+                    <a href="#" class="btn selected">Two</a>
+                    <a href="#" class="btn">Three</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn med">One</a>
+                    <a href="#" class="btn med selected">Two</a>
+                    <a href="#" class="btn med">Three</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn mini">One</a>
+                    <a href="#" class="btn mini selected">Two</a>
+                    <a href="#" class="btn mini">Three</a>
+                </div>
+                <br>
+            </div>    
+        </div>
+        <div class="col four">
+            <div class="module">
+                <div class="btn-group">
+                    <a href="#" class="btn secondary">Push It</a>
+                    <a href="#" class="btn secondary med">Push It</a>
+                    <a href="#" class="btn secondary mini">Push It</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn secondary">One</a>
+                    <a href="#" class="btn secondary selected">Two</a>
+                    <a href="#" class="btn secondary">Three</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn secondary med">One</a>
+                    <a href="#" class="btn secondary med selected">Two</a>
+                    <a href="#" class="btn secondary med">Three</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn secondary mini">One</a>
+                    <a href="#" class="btn secondary mini selected">Two</a>
+                    <a href="#" class="btn secondary mini">Three</a>
+                </div>
+                <br>
+            </div>    
+        </div>
+        <div class="col four">
+            <div class="module">
+                <div class="btn-group">
+                    <a href="#" class="btn tertiary">Push It</a>
+                    <a href="#" class="btn tertiary med">Push It</a>
+                    <a href="#" class="btn tertiary mini">Push It</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn tertiary">One</a>
+                    <a href="#" class="btn tertiary selected">Two</a>
+                    <a href="#" class="btn tertiary">Three</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn tertiary med">One</a>
+                    <a href="#" class="btn tertiary med selected">Two</a>
+                    <a href="#" class="btn tertiary med">Three</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn tertiary mini">One</a>
+                    <a href="#" class="btn tertiary mini selected">Two</a>
+                    <a href="#" class="btn tertiary mini">Three</a>
+                </div>
+                <br>
+            </div>    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col four">
+            <div class="module">
+                <div class="btn-group">
+                    <a href="#" class="btn primary">Push It</a>
+                    <a href="#" class="btn primary med">Push It</a>
+                    <a href="#" class="btn primary mini">Push It</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn primary">One</a>
+                    <a href="#" class="btn primary selected">Two</a>
+                    <a href="#" class="btn primary">Three</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn primary med">One</a>
+                    <a href="#" class="btn primary med selected">Two</a>
+                    <a href="#" class="btn primary med">Three</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn primary mini">One</a>
+                    <a href="#" class="btn primary mini selected">Two</a>
+                    <a href="#" class="btn primary mini">Three</a>
+                </div>
+                <br>
+            </div>    
+        </div>
+        <div class="col four">
+            <div class="module">
+                <div class="btn-group">
+                    <a href="#" class="btn important">Push It</a>
+                    <a href="#" class="btn important med">Push It</a>
+                    <a href="#" class="btn important mini">Push It</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn important">One</a>
+                    <a href="#" class="btn important selected">Two</a>
+                    <a href="#" class="btn important">Three</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn important med">One</a>
+                    <a href="#" class="btn important med selected">Two</a>
+                    <a href="#" class="btn important med">Three</a>
+                </div>
+                <br>
+                <div class="btn-bar">
+                    <a href="#" class="btn important mini">One</a>
+                    <a href="#" class="btn important mini selected">Two</a>
+                    <a href="#" class="btn important mini">Three</a>
+                </div>
+                <br>
+            </div>    
+        </div>
+        <div class="col four">
+            <!-- // -->
+        </div>
+    </div>
+    <div class="row">
+        <h1>Tabs</h1>
+    </div>
+    <div class="row">
+        <div class="col twelve">
+            <div class="tabbar">
+                <a href="#" class="on">Tab One</a>
+                <a href="#">Tab Two</a>
+                <a href="#">Tab Three</a>
+                <a href="#">Tab Four</a>
             </div>
-            <br>
-            <div class="btn-bar">
-                <a href="#" class="btn primary">One</a>
-                <a href="#" class="btn primary">Two</a>
-                <a href="#" class="btn primary selected">Three</a>
-                <a href="#" class="btn primary">Four</a>
-            </div>
-            <br>
-            <div class="btn-bar">
-                <a href="#" class="btn secondary">One</a>
-                <a href="#" class="btn secondary">Two</a>
-                <a href="#" class="btn secondary selected">Three</a>
-                <a href="#" class="btn secondary">Four</a>
-            </div>
-            <br>
-            <div class="btn-bar">
-                <a href="#" class="btn tertiary">One</a>
-                <a href="#" class="btn tertiary">Two</a>
-                <a href="#" class="btn tertiary selected">Three</a>
-                <a href="#" class="btn tertiary">Four</a>
-            </div>
-            <br>
-            <div class="btn-bar">
-                <a href="#" class="btn important">One</a>
-                <a href="#" class="btn important">Two</a>
-                <a href="#" class="btn important selected">Three</a>
-                <a href="#" class="btn important">Four</a>
+            <div class="module">
+                <h3>Tabbed Content</h3>
+                <p>Sibling with a .module</p>
             </div>
         </div>
     </div>
     <div class="row">
-        <h1>Table</h1>
-        <div class="col ten">
+        <h1>Tables</h1>
+    </div>
+    <div class="row">
+        <div class="col six">
             <table class="data">
                 <thead>
                     <tr>
@@ -135,7 +372,7 @@
                         <td>12/12/2012 12:12:12 PM</td>
                         <td>Stuff and things</td>
                     </tr>
-                    <tr class="alt">
+                    <tr>
                         <td>12/12/2012 12:12:12 PM</td>
                         <td>Stuff and things</td>
                     </tr>
@@ -143,44 +380,123 @@
                         <td>12/12/2012 12:12:12 PM</td>
                         <td>Stuff and things</td>
                     </tr>
-                    <tr class="alt">
-                        <td>12/12/2012 12:12:12 PM</td>
-                        <td>Stuff and things</td>
-                    </tr>
-                </tbody>
-            </table>
-
-             <table class="data alt">
-                <thead>
-                    <tr>
-                        <th>Header One</th>
-                        <th>Header Two</th>
-                    </tr>
-                </thead>
-                <tbody>
                     <tr>
                         <td>12/12/2012 12:12:12 PM</td>
                         <td>Stuff and things</td>
                     </tr>
-                    <tr class="alt">
-                        <td>12/12/2012 12:12:12 PM</td>
-                        <td>Stuff and things</td>
-                    </tr>
                     <tr>
-                        <td>12/12/2012 12:12:12 PM</td>
-                        <td>Stuff and things</td>
-                    </tr>
-                    <tr class="alt">
                         <td>12/12/2012 12:12:12 PM</td>
                         <td>Stuff and things</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <div class="col six">
+            <div class="table-module">
+                 <table class="data alt">
+                    <thead>
+                        <tr>
+                            <th>Header One</th>
+                            <th>Header Two</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12/12/2012 12:12:12 PM</td>
+                            <td>Stuff and things</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/2012 12:12:12 PM</td>
+                            <td>Stuff and things</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/2012 12:12:12 PM</td>
+                            <td>Stuff and things</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/2012 12:12:12 PM</td>
+                            <td>Stuff and things</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/2012 12:12:12 PM</td>
+                            <td>Stuff and things</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <div class="row" style="min-height:150px;">
+    <div class="row"> 
+        <div class="col four">
+            <h1>H1 Heading</h1>
+            <h2>H2 Heading</h2>
+            <h3>H3 Heading</h3>
+            <h4>H4 Heading</h4>
+            <h5>H5 Heading</h5>
+            <h6>H6 Heading</h6>
+
+            <p>He alienated his friends in the sciences by thanking them extravagantly for scientific advances he had read about in the recent newspapers and magazines, by assuring them, with a perfectly straight face, that life was getting better and better, thanks to scientific thinking.</p>
+
+            <p><strong>I love you sons of bitches.</strong> You’re all I read any more. You're the only ones who’ll talk all about the really terrific changes going on, the only ones crazy enough to know that life is a space voyage, and not a short one, either, but one that’ll last for billions of years. You’re the only ones with guts enough to really care about the future, <em>who really notice what machines do to us</em>, what wars do to us, what cities do to us, what big, simple ideas do to us, what tremendous misunderstanding, mistakes, accidents, catastrophes do to us. You're the only ones zany enough to agonize over time and distance without limit, over mysteries that will never die, over the fact that we are right now determining whether the space voyage for the next billion years or so is going to be Heaven or Hell.</p>
+        </div>
+        <div class="col four">
+            <ul>
+                <li>Unordered List Item</li>
+                <li>Unordered List Item
+                    <ul>
+                        <li>Unordered List Item</li>
+                        <li>Unordered List Item
+                            <ul>
+                                <li>Unordered List Item</li>
+                                <li>Unordered List Item
+                                    <ul>
+                                        <li>Unordered List Item</li>
+                                        <li>Unordered List Item</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Unordered List Item</li>
+                <li>Unordered List Item</li>
+            </ul>
+            <ol>
+                <li>Ordered List Item</li>
+                <li>Ordered List Item
+                    <ol>
+                        <li>Ordered List Item</li>
+                        <li>Ordered List Item
+                            <ol>
+                                <li>Ordered List Item</li>
+                                <li>Ordered List Item
+                                    <ol>
+                                        <li>Ordered List Item</li>
+                                        <li>Ordered List Item</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>Ordered List Item</li>
+                <li>Ordered List Item</li>
+            </ol>
+        </div>
+        <div class="col four">
+            <dl>
+                <dt>Term</dt>
+                <dd>Definition</dd>
+                <dt>Term</dt>
+                <dd>Definition</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="row">
         <h1>Popovers</h1>
-        <div class="col three offset-1">
+    </div>
+    <div class="row">
+        <div class="col three">
             <div class="popover">
                 <span class="arrow up"></span>
                 <div class="popover-content">
@@ -196,7 +512,7 @@
                 </div>
             </div>
         </div>
-        <div class="col three offset-1">
+        <div class="col three">
             <div class="popover">
                 <span class="arrow down"></span>
                 <ul>
@@ -213,56 +529,6 @@
                     <li><a href="#">Lorem ipsum</a></li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <div class="row" style="min-height:100px;">
-        <h1>Tabs</h1>
-        <div class="col fifteen">
-            <div class="tabbar">
-              <a href="#" class="on">Lorem Ipsum</a>
-              <a href="#">Lorem Ipsum</a>
-              <a href="#">Lorem Ipsum</a>
-              <a href="#">Lorem Ipsum</a>
-              <a href="#">Lorem Ipsum</a>
-              <a href="#">Lorem Ipsum</a>
-            </div>
-        </div>
-    </div>
-    <div class="row"> 
-        <div class="col fifteen">
-            <h1>H1 Heading</h1>
-            <h2>H2 Heading</h2>
-            <h3>H3 Heading</h3>
-            <h4>H4 Heading</h4>
-            <h5>H5 Heading</h5>
-            <h6>H6 Heading</h6>
-
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-
-            <p><strong>Lorem ipsum dolor sit amet</strong>, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-
-            <p><em>Lorem ipsum dolor sit amet</em>, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-
-            <ul>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-            </ul>
-
-            <ol>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-            </ol>
-
-            <dl>
-                <dt>Lorem Ipsum</dt>
-                <dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</dd>
-                <dt>Lorem Ipsum</dt>
-                <dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</dd>
-            </dl>
         </div>
     </div>
 </body>             
