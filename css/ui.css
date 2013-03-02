@@ -8,7 +8,8 @@ html {
 body {
     color:#666;
     background:#fff;
-    font:12px/15px 'Open Sans',Helvetica,sans-serif;
+    font-family:'Open Sans',Helvetica,sans-serif;
+    font-size:12px;
     height:100%;
     min-width:320px;
     -webkit-font-smoothing: antialiased;
@@ -16,54 +17,95 @@ body {
 
 /********* Text **************************************************/
 
-p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address {
-    margin-bottom:15px
-}
-
 h1, h2, h3, h4, h5, h6 {
     color:inherit;
     font-family:inherit;
-    font-weight:bold;
+    font-weight:700;
     text-rendering:optimizelegibility;
 }
 h1 {
     font-size:25px;
     line-height:30px;
+    margin:0 0 20px;
 }
 h2 {
     font-size:20px;
     line-height:30px;
-    margin:0 0 20px;
+    margin:0 0 15px;
 }
 h3 {
     font-size:16px;
     line-height:20px;
-    margin:0 0 10px;
+    margin:0 0 15px;
 }
 h4 {
-    font-size:13px;
-    font-weight:normal;
-    line-height:20px;    
+    font-size:14px;
+    line-height:20px; 
+    margin:0 0 15px;
 }
 h5 {
     font-size:12px;
     line-height:15px;
+    margin:0 0 15px;
 }
 h6 {
     font-size:10px;
     line-height:10px;
+    margin:0 0 10px;
 }
+
 strong {
     font-weight:800;
 }
 em {
     font-style:italic;
 }
-ol,
-ol > li,
-ul,
-ul > li {
-    list-style:none;
+
+p {
+    font-size:14px;
+    line-height:20px;
+    margin:0 0 15px;
+}
+ul, ol, dl, pre, table {
+    line-height:15px;
+    margin:0 0 15px;
+}
+
+/* unordered list */
+ul li {
+    list-style-position:inside;
+    list-style-type:disc;
+    margin:5px 0 0 15px;
+}
+ul li ul li {
+    list-style-type:circle;
+}
+ul li ul li ul li {
+    list-style-type:square;
+}
+ul li ul li ul li ul li {
+    list-style-type:circle;
+}
+
+/* oredered list */
+ol li {
+    list-style-position:inside;
+    list-style-type:decimal;
+    margin:.5em 0 0 1em;
+}
+ol li ol li {
+    list-style-type:upper-alpha;
+}
+ol li ol li ol li {
+    list-style-type:lower-alpha;
+}
+ol li ol li ol li ol li {
+    list-style-type:upper-roman;
+}
+
+ul li ul,
+ol li ol {
+    margin-bottom:0;
 }
 
 /* lists */
@@ -84,6 +126,8 @@ ul.list > li {
     background:-moz-linear-gradient(top, #fbfbfb, #f5f5f5);
     background:linear-gradient(top, #fbfbfb, #f5f5f5);
     border-bottom:1px solid #d9d7cc;
+    list-style:none;
+    margin:0;
     padding:10px 20px 9px;
     position:relative;
 }
@@ -468,13 +512,19 @@ fieldset .width_small + .width_small,
 fieldset .width_small + .width_med,
 fieldset .width_med + .width_med,
 fieldset .width_med + .width_small {
-    margin-left:1%;
+    margin-left:10px;
 }
 fieldset .width_small {
     width:32%;
+    width:-webkit-calc(33% - 10px);
+    width:-moz-calc(33% - 10px);
+    width:calc(33% - 10px);
 }
 fieldset .width_med {
     width:49%;
+    width:-webkit-calc(50% - 10px);
+    width:-moz-calc(50% - 10px);
+    width:calc(50% - 10px);
 }
 
 /* mini forms */
@@ -568,6 +618,9 @@ ul.form {
 ul.form+ul.form {
     border-top: 1px dotted #ccc;
     padding-top: 14px;
+}
+ul.form li {
+    list-style:none;
 }
 ul.form > li {
     border-radius:4px;
@@ -983,22 +1036,21 @@ button.med {
 ul.errorlist {
     margin:0;
     padding:0;
-    list-style-type:none;
     color:rgb(255, 40, 40);
 }
 ul.errorlist li {
-    display:inline;
-    font-weight:normal;
-    font-size:11px;
+    background:none;
+    display:block;
+    font-weight:bold;
+    list-style:none;
     margin:0;
-    padding:0;
+    padding:0 10px;
+    position:relative;
 }
 ul.errotlist li.error {
     border:none;
     box-shadow:none;
 }
-ul.errorlist li {background:none;}
-ul.errorlist li.error {border:0;box-shadow:none;}
 
 ul.errorlist,
 #flash_error {
@@ -1014,14 +1066,7 @@ ul.errorlist,
     margin:0 0 20px;
     padding:5px 10px;
 }
-ul.errorlist li {
-    background:none;
-    display:block;
-    font-weight:bold;
-    margin:0;
-    padding:0 10px;
-    position:relative;
-}
+
 ul.errorlist~input,
 ul.errorlist~input[type="text"],
 ul.errorlist~input[type="password"] {
@@ -1435,7 +1480,7 @@ ul.popover.light > li > a:hover {
 }
 
 /********* Alerts **************************************************/
-/* async alerts via crud.js */
+/* async alerts via crud.js MOVE THIS TO AIRSHIP */
 .notification {
     background:rgba(255,255,255,.6);
     display:none;
@@ -1501,6 +1546,7 @@ ul.popover.light > li > a:hover {
     background:#fff9e0;
     border-color:#ffd11a;
 }
+
 /* flash and static messages */
 .flash {
     background:#f5f5f5;
@@ -1549,6 +1595,7 @@ ul.popover.light > li > a:hover {
 
 /********* CLEAR FLOATS **************************************************/
 .row:after,
+.module:after,
 .tabbar:after,
 .btn-bar:after,
 .btn-group:after {
