@@ -14,15 +14,38 @@
     <link rel="stylesheet" type="text/css" href="css/example.css">
 </head>
 <body>
+    <div class="header">
+        <ul class="util-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="index-ui.html" class="active">UI Examples</a></li>
+            <li><a href="index-12-col.html">12 Column Grid Example</a></li>
+            <li><a href="index-15-col.html">15 Column Grid Example</a></li>
+            <li><a href="index-20-col.html">20 Column Grid Example</a></li>
+        </ul>
+    </div>
     <div class="row">
         <h1>Forms</h1>
     </div>
     <div class="row">
         <div class="col six">
+            <h2>Forms with Fieldsets</h2>
+            <div class="flash message">
+                <p>Message</p>
+            </div>
+            <div class="flash success">
+                <p>Success</p>
+            </div>
+            <div class="flash error">
+                <p>Error</p>
+                <ul>
+                    <li>Field is required</li>
+                    <li>Pleas enter a valid format</li>
+                </ul>
+            </div>
             <form>
                 <fieldset>
                     <div>
-                        <label for="example_1">Field Label</label>
+                        <label for="example_1">Field Label <span>required</span></label>
                         <input type="text" name="example_1">
                     </div>
                     <div class="error">
@@ -42,7 +65,9 @@
                         </select>
                     </div>
                     <div>
-                        <label for="example_4">The airspeed velocity of an unladen swallow</label>
+                        <label for="example_4">The airspeed velocity of an unladen swallow
+                            <span class="note">African or European</span>
+                        </label>
                         <textarea name="example_4"></textarea>
                     </div>
                     <div>
@@ -61,11 +86,11 @@
                 </fieldset>
                 <fieldset>
                     <div class="width_small">
-                        <label for="example_1">Small width input</label>
-                        <input type="text" name="example_1">
+                        <label for="example_7">Small width input</label>
+                        <input type="text" name="example_7">
                     </div>
                     <div class="width_small">
-                        <label for="example_3">Small width select</label>
+                        <label for="example_8">Small width select</label>
                         <select>
                             <option>Select…</option>
                             <option>one</option>
@@ -74,7 +99,7 @@
                         </select>
                     </div>
                     <div class="width_small">
-                        <label for="example_3">Small width select</label>
+                        <label for="example_9">Small width select</label>
                         <select>
                             <option>Select…</option>
                             <option>one</option>
@@ -85,11 +110,11 @@
                 </fieldset>
                 <fieldset>
                     <div class="width_med">
-                        <label for="example_1">Small width input</label>
-                        <input type="text" name="example_1">
+                        <label for="example_10">Small width input</label>
+                        <input type="text" name="example_10">
                     </div>
                     <div class="width_med">
-                        <label for="example_3">Small width select</label>
+                        <label for="example_11">Small width select</label>
                         <select>
                             <option>Select…</option>
                             <option>one</option>
@@ -106,19 +131,7 @@
             </form>
         </div>
         <div class="col six">
-            <div class="flash message">
-                <p>Message</p>
-            </div>
-            <div class="flash success">
-                <p>Success</p>
-            </div>
-            <div class="flash error">
-                <p>Error</p>
-                <ul>
-                    <li>Field is required</li>
-                    <li>Pleas enter a valid format</li>
-                </ul>
-            </div>
+            <h2>Form as List</h2>
             <div class="static message">
                 <p>Message</p>
             </div>
@@ -135,15 +148,15 @@
             <form>
                 <ul class="form">
                     <li>
-                        <label for="example_1">Field Label</label>
-                        <input type="text" name="example_1">
+                        <label for="example_12">Field Label</label>
+                        <input type="text" name="example_12">
                     </li>
                     <li>
-                        <label for="example_2">Favorite Chordate</label>
-                        <input type="text" name="example_2">
+                        <label for="example_13">Favorite Chordate</label>
+                        <input type="text" name="example_13">
                     </li>
                     <li>
-                        <label for="example_3">Pick a Purpose</label>
+                        <label for="example_14">Pick a Purpose</label>
                         <select>
                             <option>Select…</option>
                             <option>one</option>
@@ -152,37 +165,30 @@
                         </select>
                     </li>
                     <li class="error">
-                        <label for="example_4">The airspeed velocity of an unladen swallow</label>
-                        <textarea name="example_4"></textarea>
+                        <label for="example_15">The airspeed velocity of an unladen swallow</label>
+                        <textarea name="example_15"></textarea>
                         <ul class="errorlist">
                             <li>This field is required</li>
                         </ul>
                     </li>
                     <li>
-                        <input type="checkbox" name="example_5">
-                        <label for="example_5">I want that</label>
+                        <label for="example_16">Pick All That Apply</label>
+                        <ul>
+                            <li><input type="checkbox" name="example_16" id="example_16a"> <label for="example_16a">I want that</label></li>
+                            <li><input type="checkbox" name="example_16" id="example_16b"> <label for="example_16b">I want that</label></li>
+                            <li><input type="checkbox" name="example_16" id="example_16c"> <label for="example_16c">I want that</label></li>
+                            <li><input type="checkbox" name="example_16" id="example_16d"> <label for="example_16d">I want that</label></li>
+                        </ul>
                     </li>
                     <li>
-                        <label for="example_6">Which one?</label>
-                        <input type="radio" name="example_6"> One
-                        <input type="radio" name="example_6"> Two
-                        <input type="radio" name="example_6"> Three
-                        <input type="radio" name="example_6"> Four
+                        <label for="example_17">Select One</label>
+                        <input type="radio" name="example_17" id="example_17a"> <label for="example_17a">One</label>
+                        <input type="radio" name="example_17" id="example_17b"> <label for="example_17b">Two</label>
+                        <input type="radio" name="example_17" id="example_17c"> <label for="example_17c">Three</label>
+                        <input type="radio" name="example_17" id="example_17d"> <label for="example_17d">Four</label>
                     </li>
-                </ul>
-                <ul class="form">
-                    <li class="width_small">
-                        <label for="example_1">Small width input</label>
-                        <input type="text" name="example_1">
-                    </li>
-                    <li class="width_small">
-                        <label for="example_3">Small width select</label>
-                        <select>
-                            <option>Select…</option>
-                            <option>one</option>
-                            <option>two</option>
-                            <option>three</option>
-                        </select>
+                    <li>
+                        <input type="submit"> <a href="#" class="btn tertiary">cancel</a>
                     </li>
                 </ul>
             </form>
@@ -428,68 +434,76 @@
     </div>
     <div class="row"> 
         <div class="col four">
-            <h1>H1 Heading</h1>
-            <h2>H2 Heading</h2>
-            <h3>H3 Heading</h3>
-            <h4>H4 Heading</h4>
-            <h5>H5 Heading</h5>
-            <h6>H6 Heading</h6>
-
-            <p>He alienated his friends in the sciences by thanking them extravagantly for scientific advances he had read about in the recent newspapers and magazines, by assuring them, with a perfectly straight face, that life was getting better and better, thanks to scientific thinking.</p>
-
-            <p><strong>I love you sons of bitches.</strong> You’re all I read any more. You're the only ones who’ll talk all about the really terrific changes going on, the only ones crazy enough to know that life is a space voyage, and not a short one, either, but one that’ll last for billions of years. You’re the only ones with guts enough to really care about the future, <em>who really notice what machines do to us</em>, what wars do to us, what cities do to us, what big, simple ideas do to us, what tremendous misunderstanding, mistakes, accidents, catastrophes do to us. You're the only ones zany enough to agonize over time and distance without limit, over mysteries that will never die, over the fact that we are right now determining whether the space voyage for the next billion years or so is going to be Heaven or Hell.</p>
+            <h2>Headings, Paragraphs, and Blockquotes</h2>
+            <div class="module">
+                <h1>H1 Heading</h1>
+                <h2>H2 Heading</h2>
+                <h3>H3 Heading</h3>
+                <h4>H4 Heading</h4>
+                <h5>H5 Heading</h5>
+                <h6>H6 Heading</h6>
+                <p>He alienated his friends in the sciences by thanking them extravagantly for scientific advances he had read about in the recent newspapers and magazines, by assuring them, with a perfectly straight face, that life was getting better and better, thanks to scientific thinking.</p>
+                <blockquote><strong>I love you sons of bitches.</strong> You’re all I read any more. You're the only ones who’ll talk all about the really terrific changes going on, the only ones crazy enough to know that life is a sblockquoteace voyage, and not a short one, either, but one that’ll last for billions of years. You’re the only ones with guts enough to really care about the future, <em>who really notice what machines do to us</em>, what wars do to us, what cities do to us, what big, simple ideas do to us, what tremendous misunderstanding, mistakes, accidents, catastrophes do to us. You're the only ones zany enough to agonize over time and distance without limit, over mysteries that will never die, over the fact that we are right now determining whether the space voyage for the next billion years or so is going to be Heaven or Hell.</p>
+            </div>
         </div>
         <div class="col four">
-            <ul>
-                <li>Unordered List Item</li>
-                <li>Unordered List Item
-                    <ul>
-                        <li>Unordered List Item</li>
-                        <li>Unordered List Item
-                            <ul>
-                                <li>Unordered List Item</li>
-                                <li>Unordered List Item
-                                    <ul>
-                                        <li>Unordered List Item</li>
-                                        <li>Unordered List Item</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Unordered List Item</li>
-                <li>Unordered List Item</li>
-            </ul>
-            <ol>
-                <li>Ordered List Item</li>
-                <li>Ordered List Item
-                    <ol>
-                        <li>Ordered List Item</li>
-                        <li>Ordered List Item
-                            <ol>
-                                <li>Ordered List Item</li>
-                                <li>Ordered List Item
-                                    <ol>
-                                        <li>Ordered List Item</li>
-                                        <li>Ordered List Item</li>
-                                    </ol>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                </li>
-                <li>Ordered List Item</li>
-                <li>Ordered List Item</li>
-            </ol>
+            <h2>Lists</h2>
+            <div class="module">
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>Unordered List Item</li>
+                    <li>Unordered List Item
+                        <ul>
+                            <li>Unordered List Item</li>
+                            <li>Unordered List Item
+                                <ul>
+                                    <li>Unordered List Item</li>
+                                    <li>Unordered List Item
+                                        <ul>
+                                            <li>Unordered List Item</li>
+                                            <li>Unordered List Item</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Unordered List Item</li>
+                    <li>Unordered List Item</li>
+                </ul>
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>Ordered List Item</li>
+                    <li>Ordered List Item
+                        <ol>
+                            <li>Ordered List Item</li>
+                            <li>Ordered List Item
+                                <ol>
+                                    <li>Ordered List Item</li>
+                                    <li>Ordered List Item
+                                        <ol>
+                                            <li>Ordered List Item</li>
+                                            <li>Ordered List Item</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Ordered List Item</li>
+                    <li>Ordered List Item</li>
+                </ol>
+                <h3>Definition List</h3>
+                <dl>
+                    <dt>Term</dt>
+                    <dd>Definition</dd>
+                    <dt>Term</dt>
+                    <dd>Definition</dd>
+                </dl>
+            </div>
         </div>
         <div class="col four">
-            <dl>
-                <dt>Term</dt>
-                <dd>Definition</dd>
-                <dt>Term</dt>
-                <dd>Definition</dd>
-            </dl>
+            
         </div>
     </div>
     <div class="row">
