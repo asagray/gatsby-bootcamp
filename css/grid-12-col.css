@@ -69,7 +69,7 @@
     margin-right:0;
 }
 
-/* Fluid full width columns */
+/* alternative fluid column widths */
 .tenth, 
 .quarter, 
 .third, 
@@ -148,7 +148,6 @@
 .fixed .col.offset-11:last-child {
     margin-right:0;
 }
-
 
 /* clear floats */
 .row:after {clear:both;content:".";display:block;height:0;visibility:hidden;}

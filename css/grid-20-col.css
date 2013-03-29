@@ -37,6 +37,5 @@
 /* fluid column layout fix */
 .col:first-child {margin-left:0;}
 
-
 /* clear floats*/
 .row:after {clear:both;content:".";display:block;height:0;visibility:hidden;}

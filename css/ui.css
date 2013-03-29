@@ -1,9 +1,9 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
 }
 html {
-    height: 100%;
+    height:100%;
 }
 body {
     color:#666;
@@ -12,7 +12,7 @@ body {
     font-size:12px;
     height:100%;
     min-width:320px;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing:antialiased;
 }
 
 /********* Text **************************************************/
@@ -195,14 +195,9 @@ ul.bullets {
     vertical-align:top;
 }
 ul.bullets li {
-    background:transparent url('../images/bullet.png') no-repeat 0 2px;
+    background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNpiVAouYoACphrrT45szP8zGBkZrEAC//8zHPv1l3FGy1G+/UDuP5DY3TW9DMiABUoz19t+auPj4y8zsg5lEJWUBwu+fv4w5NzR1SH1th+7Gg/zVUEN+Y9sABMIV1h+chMWFi/zCC1nkJSWY2Bm+A3GIDZITEREogyoxhOolpEBDYAMYGZnYcjUMfVm+P3jA8PXT68Zvn15D8YgNkhMx9SHAaQGpBbdAJAXWFmY/jvwC4kxfP3wnOHfvz8oChiZWBj4BaUYQGpAaoH4N7oBzMDAYvzz6wfDl89vGf79/Y3qRGZWBlZOQRgXqwsYfvxhPPnpwxvnP39+A53+Fhz8EOsZGbh4hBmAcgzffzMeZ8ACQGHw99kX5sXXz+9m4BGUY2BiYmP4+fM7GIPYIDGQHEgNSC02F/xecIl7Oz/7q3m/D61I0jZ1YuATEQdL/v33j+HMoRUMj15/mbfgEu92dP/DDACZ+mXiad66YI3vZ5693RTNw/ZfGyT55Rfj1QcfWZauvcG7CcTF5QKQh38C8fu1NzjXAOmdQMwBlf8BxJ+B+CtUzX9cBvyFKv4NVQwL7b9Qsb+wpIwOGP///89ACWBioBAMvAEAAQYAH5a0jw8T26cAAAAASUVORK5CYII=) no-repeat 0 2px;
     list-style:none;
-    margin:0 0 15px;
-    padding:0 0 0 20px;
-}
-ul.bullets li:last-child,
-ul.bullets li:only-child {
-    margin:0;
+    padding-left:20px;
 }
 .module ul.bullets:last-child {
     margin-bottom:15px;
@@ -400,8 +395,9 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
     background-color:#fcfcfc;
-    border:1px solid #bfbfbf;
-    border-color:#bfbfbf; /* redundant but needed for transition */
+    border-color:#bfbfbf;
+    border-style:solid;
+    border-width:1px;
     border-radius:4px;
     box-shadow:0 1px 0 rgba(255,255,255,.5),
         inset 0 1px 3px 0 rgba(0,0,0,.1);
@@ -422,7 +418,7 @@ input[type="color"] {
     transition:all .2s linear;
 }
 select {
-    background-image:url('../images/forms_select_arrow.png');
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAJCAYAAADpeqZqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpi/P71gxQDiYAFRHByCzwlVgPQEmkmEOP///9EaYCpA2v68e2jNCGNIHmQOrgmQhqRNaBowqURXQOGJnSN2DRg1YSsEZsGnJpgGnHJAQQYAF80SKemf/WsAAAAAElFTkSuQmCC);
     background-repeat:no-repeat;
     background-position:99% 50%;
     box-shadow:inset 0 1px 0 #fff,
@@ -488,7 +484,8 @@ button:focus {
 /* fieldsets */
 fieldset {}
 fieldset.submit {}
-fieldset.submit div {
+fieldset.submit div,
+fieldset .submit {
     vertical-align:middle;
     width:auto;
 }
@@ -499,32 +496,29 @@ fieldset > div {
     vertical-align:top;
     width:100%;
 }
-fieldset .submit {
-    vertical-align:middle;
-}
 /* medium and small sizes */
-fieldset .inline {
+fieldset .field-inline {
     float:left;
 }
-fieldset .inline,
-fieldset .width_small,
-fieldset .width_med {
+fieldset .field-inline,
+fieldset .field-third,
+fieldset .field-half {
     display:inline-block;
 }
-fieldset .inline + .inline,
-fieldset .width_small + .width_small,
-fieldset .width_small + .width_med,
-fieldset .width_med + .width_med,
-fieldset .width_med + .width_small {
+fieldset .field-inline + .field-inline,
+fieldset .field-third + .field-third,
+fieldset .field-third + .field-half,
+fieldset .field-half + .field-half,
+fieldset .field-half + .field-third {
     margin-left:10px;
 }
-fieldset .width_small {
+fieldset .field-third {
     width:32%;
     width:-webkit-calc(33% - 10px);
     width:-moz-calc(33% - 10px);
     width:calc(33% - 10px);
 }
-fieldset .width_med {
+fieldset .field-half {
     width:49%;
     width:-webkit-calc(50% - 10px);
     width:-moz-calc(50% - 10px);
@@ -620,8 +614,8 @@ ul.form {
     margin:0 0 15px;
 }
 ul.form+ul.form {
-    border-top: 1px dotted #ccc;
-    padding-top: 14px;
+    border-top:1px dotted #ccc;
+    padding-top:14px;
 }
 ul.form li {
     list-style:none;
@@ -650,7 +644,7 @@ ul.form > li.submit > a.delete {
 }
 .module ul.form > li.submit {
     background:#f7f7f7;
-    border-radius: 0 0 4px 4px;
+    border-radius:0 0 4px 4px;
 }
 ul.form > li.section_header {
     background:#ecede8;
@@ -954,7 +948,7 @@ span.btn.close {
     height:20px;
     line-height:20px;
     text-align:center;
-    text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+    text-shadow:0 1px rgba(255, 255, 255, 0.1);
     width:20px;
 }
 span.btn.close:hover {
@@ -979,7 +973,7 @@ span.btn.close:hover {
 button.mini,
 input[type="submit"].mini,
 .mini input[type="submit"] {
-    display: inline-block;
+    display:inline-block;
     font-size:12px;
     line-height:1;
     padding:3px 5px;
@@ -988,7 +982,7 @@ input[type="submit"].mini,
 button.med,
 input[type="submit"].med,
 .med input[type="submit"] {
-    display: inline-block;
+    display:inline-block;
     font-size:13px;
     padding:3px 10px;
 }
@@ -1122,7 +1116,7 @@ label+.errorlist,
     padding:15px 20px;
 }
 .module-header:first-child + .col {
-    margin-left: 0;
+    margin-left:0;
 }
 .module-header:last-child {
     border-radius:4px;
@@ -1157,7 +1151,7 @@ table.data tr th {
 }
 table.data tr th a {
     color:#807e73;
-    cursor: pointer
+    cursor:pointer
 }
 table.data tr {
     border-bottom:1px solid #e6e5da;
@@ -1185,10 +1179,10 @@ table.data tr td em {
     height:27px;
     line-height:20px;
     margin:0 10px 0 0;
-    padding: 3px 10px;
+    padding:3px 10px;
 }
 
-/*********  Table Module **************************************************/
+/********* Table Module **************************************************/
 .table-module {
     background:#fff;
     border:1px solid #d9d7cc;
@@ -1276,16 +1270,16 @@ ul.popover {
     background:-webkit-linear-gradient(top, #fff, #f2f2f2);
     background:-moz-linear-gradient(top, #fff, #f2f2f2);
     background:linear-gradient(top, #fff, #f2f2f2);
-    color: #666;
+    color:#666;
     padding:10px;
     margin:4px;
-    position: relative;
-    z-index: 100;
+    position:relative;
+    z-index:100;
 }
 .popover .arrow  {
     background:#1f3a4c;
-    border-color: #132a39;
-    border-style: solid;
+    border-color:#132a39;
+    border-style:solid;
     display:block;
     height:10px;
     position:absolute;
@@ -1301,12 +1295,12 @@ ul.popover {
     border-width:1px 0 0 1px;
     box-shadow:inset 1px 1px 0 #38576b;
     left:50%;
-    margin-left: -5px;
+    margin-left:-5px;
     top:-6px;
 }
 .popover .arrow.right {
     border-width:1px 1px 0 0;
-    margin-top: -5px;
+    margin-top:-5px;
     right:-6px;
     top:50%;
 }
@@ -1314,7 +1308,7 @@ ul.popover {
     border-width:0 1px 1px 0;
     bottom:-6px;
     left:50%;
-    margin-left: -5px;
+    margin-left:-5px;
 }
 .popover .arrow.left {
     border-width:0 0 1px 1px;
@@ -1346,7 +1340,7 @@ ul.popover.light > li > a:hover {
     background:linear-gradient(top, #e5f5ff, #d1e3ee);
 }
 .popover.light .popover-content {
-    background: none;
+    background:none;
 }
 .popover.light .arrow {
     background:#f7f7f7;
@@ -1403,10 +1397,10 @@ ul.popover.light > li > a:hover {
     margin-left:-5px;
 }
 .popover.tooltip:before {
-    border-color: rgba(0,0,0, 0);
+    border-color:rgba(0,0,0, 0);
     border-bottom-color:#000;
     border-width:6px;
-    left: 50%;
+    left:50%;
     margin-left:-6px;
 }
 
@@ -1613,12 +1607,12 @@ ul.popover.light > li > a:hover {
 /********* Mobile **************************************************/
 
 /* Viewport Declarations */
-@-ms-viewport { width: device-width; }
-@-o-viewport { width: device-width; }
-@viewport { width: device-width; }
+@-ms-viewport { width:device-width; }
+@-o-viewport { width:device-width; }
+@viewport { width:device-width; }
 
 /* small screens */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width:767px) {
     .row,
     .row .col,
     .fixed,
@@ -1663,14 +1657,14 @@ ul.popover.light > li > a:hover {
     .col.offset-11 {
         margin-left:0;
     }
-    fieldset .inline,
-    fieldset .width_small,
-    fieldset .width_med,
-    fieldset .inline + .inline,
-    fieldset .width_small + .width_small,
-    fieldset .width_small + .width_med,
-    fieldset .width_med + .width_med,
-    fieldset .width_med + .width_small {
+    fieldset .field-inline,
+    fieldset .field-third,
+    fieldset .field-half,
+    fieldset .field-inline + .field-inline,
+    fieldset .field-third + .field-third,
+    fieldset .field-third + .field-half,
+    fieldset .field-half + .field-half,
+    fieldset .field-half + .field-third {
         display:block;
         margin-left:0;
         width:100%;
