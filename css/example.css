@@ -40,8 +40,6 @@ body {
     margin:0 auto 15px;
 }
 
-/* FROM AIRSHIP */
-
 /* header */
 .header {
     background:#e0e1dd;
@@ -87,8 +85,6 @@ body {
     text-shadow:0 -1px 0 rgba(0,0,0,.25);
 }
 
-
-
 /* Default desktop */
 @media (min-width: 980px) and (max-width: 1400px) {
     .row {width:980px;}
@@ -97,21 +93,13 @@ body {
 @media (min-width: 1400px) {
     .row {width:1400px;}
 }
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-    .row {width:760px;}
-}
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-    .row {width:320px;}
+/* Portrait tablet and smaller */
+@media (max-width: 768px) {
+    .row {padding:0 20px;width:100%;}
     .tabbar a,
     .util-nav li a {
         border:1px solid #d9d9d9;
         border-radius:4px;
-        margin:0 5px 5px 0;
+        margin:5px 5px 5px 0;
     }
-}
-/* Landscape phones and down */
-@media (max-width: 480px) {
-    .row {width:320px;}
 }
