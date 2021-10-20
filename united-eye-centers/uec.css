@@ -1,0 +1,315 @@
+/* CSS Document */
+
+/* =Global Tags-------------------------------- */
+body {
+	margin: 0px;
+	padding:0px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:12px;
+	line-height:18px;
+	background-color: #EDEDED;
+}
+p { 
+	margin: 7px 0px 0px 0px;
+}
+
+a {
+	color: #394F65;
+	text-decoration: none;
+}
+a:link {color:#394F65;}
+a:visited {color:#394F65;}
+a:hover {color:#000000;}
+a:active {color:#0000CC;
+}
+input, textarea, select {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 1px;
+	margin-bottom: 5px;
+	font-size: 9px;
+	color: #333333;
+	background-color: #FFFFFF;
+	border: 1px solid #333333;
+}
+/* =Positioning-------------------------------- */
+#wrapper {
+	margin:0px;
+	width: 895px;
+	border-right: 1px solid #CAC8CA;
+	background-color:#E2E2E2;
+}
+#container {
+	float:left;
+	width: 685px;
+	height:100%;
+	border-right:1px solid #C4C8CA;
+	background-color:#E2EAEF;
+	margin: 0px;
+	padding: 0px;
+	text-align:left;
+}
+#navcontainer {
+	float:left;
+	margin:0px;
+	width:196px;
+}
+#logo {
+	margin: 0px;
+	padding: 0px;
+	width:196px;
+}
+#nav {
+	background-image: url(images/nav_nav_bkgrnd.gif);
+	background-repeat: repeat-y;
+	margin:0px;
+	padding:0px;
+	width: 196px;
+	height: auto;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	font-size: 11px;
+	color: #000000;
+}
+#nav ul {
+	float:left;
+	width:196px;
+	margin: 0px;
+	padding:0px;
+	font-weight:bold;
+	font-size:11px;
+	background-image: url(images/nav_nav_bkgrnd.gif);
+	background-repeat: repeat-y;
+	background-color:none;
+}
+#nav li {
+	list-style: none;
+	width:194px;
+	display: block;
+	background-color:none;
+}
+#nav a {
+	border-top: 1px dashed #AFAFAF;
+	display:block;
+	padding:10px 10px 10px 20px;
+	text-decoration:none;
+	background-color:none;
+	color: #394F65;
+}
+#nav ul li a:hover {
+	background-color:#80A0C0;
+	color:#FFFFFF;
+}
+#nav li#active a
+{
+	background: #666666;
+	color: #fff;
+}
+#navcap {
+	width:196px;
+	margin:0px;
+	clear:both;
+}
+div#maincontent {
+	width:455px;
+	padding-top: 15px;
+	padding-bottom:35px;
+	margin-left: 210px;
+	text-align:left;
+}
+#maincontent li {
+	margin: 7px 0px 0px -3px;
+	padding-left: 3px;
+	list-style-position: outside;
+	list-style-type: square;
+}
+#headimg img {
+	border: 1px solid #333333;
+}
+#footer {
+	background-color:#FFF;
+	width:100%;
+	height:100%;
+	margin-bottom:0px;
+	border-bottom:3px double #CAC8CA;
+	border-top:3px double #CAC8CA;
+	clear:both;
+}
+#footer p {
+	font-size:9px;
+	margin:15px;
+	color:#666666;
+}
+#sidebar {
+margin-left:690px;
+margin-top:0px;
+padding-top:20px;
+width:187px; 
+}
+html>body #sidebar {
+    width:190px;
+	margin-left:695px;
+}
+#sidebar p, #sidebar td {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	line-height:12px;
+}
+#sidebar td {padding: 2px 0px 2px 0px;}
+#sidebar table {margin-top:5px;}
+
+.contact-number {
+	width: 210px;
+	background: #394f65;
+	margin-left: 685px;
+	padding: 10px;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+/* =Sec Specific---------------------------------------- */
+#seccontainer {
+	float:left;
+	width: 685px;
+	height:100%;
+	border-right:1px solid #C4C8CA;
+	background-color:#E7EEF3;
+	margin: 0px;
+	padding: 0px;
+	text-align:left;
+	background-image:url(images/sec_header_img.gif);
+	background-repeat:repeat-x;
+}
+
+#secheader {
+	width:100%;
+	margin-top:68px;
+	margin-bottom:40px;
+	padding-bottom:5px;
+}
+#secheader p{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	color:white;
+}
+#services {
+	display:block;
+	float:right;
+	width:180px;
+	padding:5px 5px 10px 10px;
+	background-color:#ECECEC;
+	border: 1px solid #394F65;
+	margin:10px;
+}
+/*=Decoration--------------------------------------------------*/
+
+
+
+.contact-number h3 {
+	color: #fff;
+	font-size: 16px;
+	margin: 0 0 5px 0;
+}
+
+.contact-number h2 {
+	font-size: 24px;
+	color: #fff;
+	margin-top: 0;
+}
+
+.contact-number dl {
+	color: #fff;
+	
+}
+
+.contact-number dt {
+	float: left;
+	width: 32%;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+p.headline {
+	font-size:20px;
+	line-height:20px;
+	font-style:italic;
+	color:#394F65;
+	margin-bottom:7px;
+}
+p.subhead {
+	font-size:15px;
+	font-weight:bold;
+	color:#394F65;
+}
+.sidebarHead {
+	font-weight:bold;
+	font-size:11px;
+	color:#CC0000;
+}
+p.indent {
+	margin-left:10px;
+}
+.ital {
+	font-style:italic;
+}
+.testimonialSig {
+	font-style:italic;
+	padding-bottom:15px;
+	margin-bottom:15px;
+	border-bottom: 1px dashed #666666;
+}
+p.fineprint {
+	font-size:8px;
+	color:#666666;
+	line-height:8px;
+	margin-bottom:20px;
+}
+img.floatimg {
+	float:right;
+	margin-left:10px;
+	margin-bottom:10px;
+	border: 1px solid #394F65;
+}
+.formwd {
+	width:190px;
+}
+.citywd {
+	width:100px;
+}
+.statewd {
+	width:20px;
+}
+.zipwd {
+	width:45px;
+}
+
+/*=Contact Table-----------------------------------------------*/
+.contacTable, .contactTable td, .contactTable th {
+	border: 1px solid #fff;
+}
+
+.contactTable table td {border: none}
+
+.contactTable td {
+	vertical-align: top;
+	padding: 3px;
+}
+
+.contactTable th {
+	padding: 5px 3px;
+	color:#394F65;
+	font-size: 14px;
+}
+/*=Hacks-------------------------------------------------------*/
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+p span.displaynone { display:none;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
